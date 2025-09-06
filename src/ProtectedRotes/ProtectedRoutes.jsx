@@ -6,5 +6,5 @@ import LoginPage from "../Pages/LoginPage/LoginPage";
 
 export default function ProtectedRoutes({ children }) {
   const { isLoggedIn } = useContext(authContext);
-  return isLoggedIn ? children : <LoginPage />;
+  return isLoggedIn ? children : <Navigate to="/login"  />;
 }
